@@ -1,0 +1,164 @@
+
+	<!--================Home Banner Area =================-->
+	<section class="banner_area">
+		<div class="banner_inner d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content text-center">
+					<h2>Danh sách sản phẩm</h2>
+					<div class="page_link">
+						<a href="/index">Trang chủ</a>
+						<a href="/category">Loại sản phẩm</a>
+						<a href="/category">Thời trang nữ</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================Category Product Area =================-->
+	<section class="cat_product_area section_gap">
+		<div class="container-fluid">
+			<div class="row flex-row-reverse">
+				<div class="col-lg-9">
+					<div class="product_top_bar">
+						<div class="left_dorp">
+							<select class="sorting">
+								<option value="1">Sắp xếp mặc định</option>
+								<option value="2">Giá tăng dần</option>
+								<option value="3">Giá giảm dần</option>
+							</select>
+						</div>
+					</div>
+
+					<div id="category-single-product-section" class="latest_product_inner row">
+						<!--ajax goes here-->
+						<div></div>
+					</div>
+
+				</div>
+				<div class="col-lg-3">
+					<div class="left_sidebar_area">
+						<aside class="left_widgets cat_widgets">
+							<div class="l_w_title">
+								<h3>Loại sản phẩm</h3>
+							</div>
+							<div class="widgets_inner type-filter">
+								<ul class="list">
+									<li>
+										<a href="javascript:;">Áo</a>
+										<ul class="list type-filter-shirt">
+											<input type="checkbox" value="Áo len" onclick="dc.filter();">Áo len<br>
+											<input type="checkbox" value="Áo thun" onclick="dc.filter();">Áo thun<br>
+											<input type="checkbox" value="Áo lót" onclick="dc.filter();">Áo lót<br>
+											<input type="checkbox" value="Áo sơ mi" onclick="dc.filter();">Áo sơ mi<br>
+											<input type="checkbox" value="Áo khoác" onclick="dc.filter();">Áo khoác<br>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Quần/Váy</a>
+										<ul class="list type-filter-pants">
+											<input type="checkbox" value="Quần tây" onclick="dc.filter();">Quần tây<br>
+											<input type="checkbox" value="Quần thể thao" onclick="dc.filter();">Quần thể thao<br>
+											<input type="checkbox" value="Quần jogger" onclick="dc.filter();">Quần jogger<br>
+											<input type="checkbox" value="Váy" onclick="dc.filter();">Váy<br>
+											<input type="checkbox" value="Đầm" onclick="dc.filter();">Đầm<br>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Giày</a>
+										<ul class="list type-filter-shoes">
+											<input type="checkbox" value="Sneaker" onclick="dc.filter();">Sneaker<br>
+											<input type="checkbox" value="Giày cao cổ" onclick="dc.filter();">Giày cao cổ<br>
+											<input type="checkbox" value="Giày cao gót" onclick="dc.filter();">Giày cao gót<br>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</aside>
+
+						<aside class="left_widgets p_filter_widgets brand-filter">
+							<div class="l_w_title">
+								<h3>Thương hiệu</h3>
+							</div>
+							<div class="widgets_inner color">
+								<ul class="list">
+									<input type="checkbox" value="Gucci" onclick="dc.filter();">Gucci<br>
+									<input type="checkbox" value="H%26M" onclick="dc.filter();">H&M<br>
+									<input type="checkbox" value="Pull%&Bear" onclick="dc.filter();">Pull&Bear<br>
+									<input type="checkbox" value="Mango" onclick="dc.filter();">Mango<br>
+									<input type="checkbox" value="Routine" onclick="dc.filter();">Routine<br>
+								</ul>
+							</div>
+						</aside>
+
+						<aside class="left_widgets p_filter_widgets color-filter">
+							<div class="l_w_title">
+								<h3>Màu sắc</h3>
+							</div>
+							<div class="widgets_inner color">
+								<ul class="list">
+									<input type="checkbox" value="Đen" onclick="dc.filter();">Đen<br>
+									<input type="checkbox" value="Trắng" onclick="dc.filter();">Trắng<br>
+									<input type="checkbox" value="Xanh da trời" onclick="dc.filter();">Xanh da trời<br>
+									<input type="checkbox" value="Vàng gold" onclick="dc.filter();">Vàng gold<br>
+									<input type="checkbox" value="Hồng mạnh mẽ" onclick="dc.filter();">Hồng mạnh mẽ<br>
+								</ul>
+							</div>
+						</aside>
+
+						<aside class="left_widgets p_filter_widgets price-filter">
+							<div class="l_w_title">
+								<h3>Giá</h3>
+							</div>
+							<div class="widgets_inner color">
+								<div class="range_item">
+									<div id="slider-range"></div>
+									<div class="row m0">
+										<label for="amount">Nhập giá : </label>
+										<input style="background: white" type="text" id="amount" onkeyup="myFunction(this.value)">
+									</div>
+								</div>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</div>
+
+
+			<script>
+
+				function myFunction(val) {
+					dc.showProductsPrice();
+				}
+
+			</script>
+			
+
+
+			<div class="row">
+				<nav class="cat_page mx-auto" aria-label="Page navigation example">
+					<ul id="page-pagination" class="pagination">
+						<li class="page-item active">
+							<div class="page-link">01</div>
+						</li>
+						<li class="page-item">
+							<div class="page-link">02</div>
+						</li>
+						<li class="page-item">
+							<div class="page-link">03</div>
+						</li>
+						<li class="page-item blank">
+							<div class="page-link">04</div>
+						</li>
+						<li class="page-item">
+							<div class="page-link">05</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</section>
+	<!--================End Category Product Area =================-->
+
+	
